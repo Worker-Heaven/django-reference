@@ -1,3 +1,11 @@
 <h1>
-    You are on the index page of xml feed
+    This is the list of our members
 </h1>
+
+<ul>
+{% for person in members %}
+    <li>
+        <h4>{{ person.name }}</h4>
+    </li>
+{% endfor %}
+</ul>
