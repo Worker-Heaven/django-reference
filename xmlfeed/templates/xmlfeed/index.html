@@ -1,11 +1,24 @@
-<h1>
-    This is the list of our members
-</h1>
+{% load static %}
 
-<ul>
-{% for person in members %}
-    <li>
-        <h4>{{ person.name }}</h4>
-    </li>
-{% endfor %}
-</ul>
+<html>
+    <head>
+        <title>XML Feed</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'xmlfeed/css/bootstrap.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'xmlfeed/personal.css' %}" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>
+                This is the list of our members
+            </h1>
+
+            <ul>
+            {% for person in members %}
+                <li>
+                    <h4>{{ person.name }}</h4>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+    </body>
+</html>
