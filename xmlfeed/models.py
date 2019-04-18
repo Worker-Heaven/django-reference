@@ -5,3 +5,9 @@ class Person(models.Model):
 
     def __str__(self):
         return self.name
+
+class Site(models.Model):
+    url = models.CharField(max_length=250)
+
+    def __str__(self):
+        return self.url

@@ -2,11 +2,13 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 
-from .models import Person
+from .models import Person, Site
 
 def index(request):
-    context = {
+    site_list = Site.objects.all()
 
+    context = {
+        'sites': site_list,
     }
 
     return render(request, 'xmlfeed/index.html', context)
