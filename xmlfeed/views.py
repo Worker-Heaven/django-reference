@@ -5,12 +5,18 @@ from django.template import loader
 from .models import Person
 
 def index(request):
+    context = {
+
+    }
+
+    return render(request, 'xmlfeed/index.html', context)
+
+def summary(request):
     members = Person.objects.order_by('name')
 
-    template = loader.get_template('xmlfeed/index.html')
+    template = loader.get_template('xmlfeed/summary.html')
     context = {
         'members': members,
     }
 
     return HttpResponse(template.render(context, request))
-

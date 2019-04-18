@@ -1,24 +1,23 @@
-{% load static %}
+{% extends 'xmlfeed/base.html' %}
 
-<html>
-    <head>
-        <title>XML Feed</title>
-        <link rel="stylesheet" type="text/css" href="{% static 'xmlfeed/css/bootstrap.min.css' %}" />
-        <link rel="stylesheet" type="text/css" href="{% static 'xmlfeed/personal.css' %}" />
-    </head>
-    <body>
-        <div class="container">
-            <h1>
-                This is the list of our members
-            </h1>
-
-            <ul>
-            {% for person in members %}
-                <li>
-                    <h4>{{ person.name }}</h4>
-                </li>
-            {% endfor %}
-            </ul>
+{% block main %}
+    <div class="w-100">
+        <div class="text-center">
+            <h1>Site Details</h1>
         </div>
-    </body>
-</html>
+        <table class="table table-dark">
+            <thead>
+                <th scope="col">#</th>
+                <th scope="col">Site URL</th>
+                <th scope="col">XML Feed URL</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="col">1</th>
+                    <th scope="col">Mark</th>
+                    <th scope="col">Ortto</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

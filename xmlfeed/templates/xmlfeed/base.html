@@ -1,0 +1,17 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Django Ajax Example with large task</title>
+        <link rel="stylesheet" href="{% static 'xmlfeed/css/bootstrap.min.css' %}" />
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="d-flex justify-content-end">
+                {% block main %}
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
